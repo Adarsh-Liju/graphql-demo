@@ -1,0 +1,36 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Student {
+  id: ID!
+  name: String!
+  age: Int!
+  courses: [Course!]!
+  createdAt: String!
+  updatedAt: String!
+}
+
+type Course {
+  id: ID!
+  title: String!
+  description: String
+  students: [Student!]!
+  createdAt: String!
+  updatedAt: String!
+}
+
+type Query {
+  students: [Student!]!
+  student(id: ID!): Student
+  courses: [Course!]!
+  course(id: ID!): Course
+}
+
+type Mutation {
+  addStudent(name: String!, age: Int!): Student!
+  addCourse(title: String!, description: String): Course!
+  enrollStudent(studentId: ID!, courseId: ID!): Student!
+  unenrollStudent(studentId: ID!, courseId: ID!): Student!
+}
