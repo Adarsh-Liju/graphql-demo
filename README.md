@@ -1,4 +1,4 @@
-# TwoSpoon - GraphQL Server with Prisma
+# GraphQL Server with Prisma
 
 A GraphQL server built with Express, Apollo Server, and Prisma ORM.
 
